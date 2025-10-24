@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.input-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px 60px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeInScale 0.6s ease-out;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    color: #e74c3c;
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#nameInput {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    outline: none;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+#nameInput:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.6);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.heart-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#heartCanvas {
+    display: block;
+}
+
+.back-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: auto;
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 16px;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
